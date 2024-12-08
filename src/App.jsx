@@ -1,11 +1,27 @@
-import Navbar from "./components/Navbar/Navbar"
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom"
+import Home from './components/Home/Home'
+import Blogs from './components/Blogs/Blogs'
+import About from './components/About/About'
+import Contact from './components/Contact/Contact'
+import RootLayout from "./Layout/RootLayout"
+
+
 
 function App() {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<RootLayout />} >
+        <Route index element={<Home />} />
+        <Route path="blogs" element={<Blogs /> } />
+        <Route path="about" element={<About /> } />
+        <Route path="contact" element={<Contact /> } />
+      </Route>
+    )
+  )
 
   return (
-   <div>
-      <Navbar></Navbar>
-   </div>
+   <RouterProvider router={router} />
+
   )
 }
 
