@@ -3,13 +3,14 @@ import Home from './components/Home/Home'
 import Blogs from './components/Blogs/Blogs'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
-import Rootlayout from "./layout/Rootlayout"
+import Rootnav from "./rootlayout/Rootnav"
+
 
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<Rootlayout />} >
+      <Route path="/" element={<Rootnav /> }>
         <Route index element={<Home />} />
         <Route path="blogs" element={<Blogs /> } />
         <Route path="about" element={<About /> } />
