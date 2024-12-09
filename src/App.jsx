@@ -2,11 +2,13 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import Home from './components/Home/Home'
 import Blogs from './components/Blogs/Blogs'
 import About from './components/About/About'
-// import Contact from './components/Contact/Contact'
 import Rootnav from "./rootlayout/Rootnav"
 import Contactlayput from "./rootlayout/Contactlayput"
 import Contactinfo from "./components/Contactinfo"
 import ContactForm from "./components/ContactForm"
+import Errorpage from "./components/Errorpage"
+import JobsLayout from "./rootlayout/JobsLayout"
+import Jobs, { jobsLoader } from "./components/Jobs"
 
 
 
@@ -18,9 +20,13 @@ function App() {
         <Route path="blogs" element={<Blogs /> } />
         <Route path="about" element={<About /> } />
         <Route path="contact" element={<Contactlayput />}>
-        <Route path="info" element={<Contactinfo /> } />
-        <Route path="form" element={<ContactForm /> } /> 
+         <Route path="info" element={<Contactinfo /> } />
+         <Route path="form" element={<ContactForm /> } /> 
         </Route>
+        <Route path="jobs" element={<JobsLayout /> }>
+         <Route index element={<Jobs/>} loader={jobsLoader} />
+        </Route>
+        <Route path="*" element={<Errorpage /> } />
       </Route>
     )
   )

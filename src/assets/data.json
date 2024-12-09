@@ -1,0 +1,35 @@
+{
+    "jobs":[
+        {
+          "id": 1,
+          "title": "Software Engineer",
+          "salary": 85000,
+          "location": "San Francisco, CA"
+        },
+        {
+          "id": 2,
+          "title": "Data Scientist",
+          "salary": 95000,
+          "location": "New York, NY"
+        },
+        {
+          "id": 3,
+          "title": "Product Manager",
+          "salary": 105000,
+          "location": "Seattle, WA"
+        },
+        {
+          "id": 4,
+          "title": "Graphic Designer",
+          "salary": 60000,
+          "location": "Austin, TX"
+        },
+        {
+          "id": 5,
+          "title": "Marketing Specialist",
+          "salary": 70000,
+          "location": "Chicago, IL"
+        }
+      ]
+      
+}

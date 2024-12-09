@@ -12,6 +12,7 @@ const Navbar = () => {
           <NavLink to='blogs'><a className='p-5'>Blogs</a></NavLink>
           <NavLink to='about'><a className='p-5'>About</a></NavLink>
           <NavLink to='contact'><a className='p-5'>Contact</a></NavLink>
+          <NavLink to='jobs'><a className='p-5'>Jobs</a></NavLink>
         </ul>
 
         <div>
