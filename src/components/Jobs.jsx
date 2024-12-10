@@ -6,13 +6,13 @@ const Jobs = () => {
     const jobsData = useLoaderData()
     
   return (
-    <div>
+    <div className='grid grid-cols-3'>
         {jobsData.map(job => {
             return <Link>
                <div className='border-2 border-gray-950 text-3xl p-3 m-4'>
                <h4>{job.title} </h4>
-               <p>{job.salary} </p>
-               <p>{job.location}</p>
+               <p>{job.price} </p>
+               <p>{job.description} </p>
                </div>
             </Link>
         })}
@@ -23,6 +23,6 @@ const Jobs = () => {
 export default Jobs
 
 export const jobsLoader = async ()=> {
-    const res = await fetch('http://localhost:5000/jobs');
+    const res = await fetch('https://fakestoreapi.com/products');
     return res.json();
 }
