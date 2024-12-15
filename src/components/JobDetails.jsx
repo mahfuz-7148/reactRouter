@@ -23,5 +23,8 @@ export default JobDetails
 export const jobDetailsLoader = async({params}) => {
     const {id} = params
     const res = await fetch('https://fakestoreapi.com/products/' + id);
+    if(!res.ok) {
+      throw Error('Opss!! not found')
+    }
     return res.json();
 }

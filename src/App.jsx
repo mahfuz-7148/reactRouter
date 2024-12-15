@@ -10,6 +10,7 @@ import Errorpage from "./components/Errorpage"
 import JobsLayout from "./rootlayout/JobsLayout"
 import Jobs, { jobsLoader } from "./components/Jobs"
 import JobDetails, { jobDetailsLoader } from "./components/JobDetails"
+import ErrorRouter from "./components/ErrorRouter"
 
 
 
@@ -24,7 +25,7 @@ function App() {
          <Route path="info" element={<Contactinfo /> } />
          <Route path="form" element={<ContactForm /> } /> 
         </Route>
-        <Route path="jobs" element={<JobsLayout /> }>
+        <Route path="jobs" element={<JobsLayout />} errorElement={<ErrorRouter/>}>
          <Route index element={<Jobs/>} loader={jobsLoader} />
          <Route path=":id" element={<JobDetails /> } loader={jobDetailsLoader} />
         </Route>
